@@ -15,9 +15,6 @@ Number.prototype.to_degrees = ->
 Number.prototype.to_radians = ->
   this / 180 * Math.PI
 
-$ ->
-  $('#pie').pie()
-
 # holds pie edges.  Does not interface at all with dom or rendering
 # @value is the sum of all the slices
 class Pie

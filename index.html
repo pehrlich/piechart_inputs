@@ -1,8 +1,8 @@
 <html>
 <head>
-    <!-- note: this is important for 3.js: https://github.com/mbostock/d3/issues/1006 -->
+    <!-- note: this is important for d3.js: https://github.com/mbostock/d3/issues/1006 -->
     <meta charset="utf-8">
-    <title>Piechart Inputs</title>
+    <title>PieChart Inputs</title>
 </head>
 
 <style>
@@ -13,12 +13,16 @@
 </style>
 <body>
 
-
-<div id="pie">
-    <input type="hidden" name='author' value="20">
-    <input type="hidden" name='publisher' value="2">
-    <input type="hidden" name='charity' value="3">
-</div>
+<form>
+    <div id="pie">
+        <input type="hidden" name='author' value="20">
+        <input type="hidden" name='publisher' value="2">
+        <input type="hidden" name='charity' value="3">
+    </div>
+    <script type="text/javascript">
+        $('#pie').pie();
+    </script>
+</form>
 </body>
 
 <script type="text/javascript" src="js/lib/jquery-1.9.0.js"></script>
