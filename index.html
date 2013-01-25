@@ -1,0 +1,120 @@
+<html>
+<head>
+    <!-- note: this is important for 3.js: https://github.com/mbostock/d3/issues/1006 -->
+    <meta charset="utf-8">
+    <title>PieChart Inputs</title>
+</head>
+
+<style>
+    body{
+        font-family: 'Helvetica Neue', 'Helvetica';
+        line-height: 1.6em;
+    }
+    pre{
+        line-height: 1.2em;
+    }
+    #pie {
+        width: 100%;
+        height: 400px;
+    }
+    .content{
+        width: 800px;
+        margin: 40px 100px;
+    }
+    tr > td:first-child{
+        vertical-align: top;
+        font-weight: bold;
+        padding-right: 10px;
+    }
+    td{
+        padding-bottom: 10px;
+    }
+
+</style>
+<body>
+
+<div class="content">
+    <h1>PieChart Inputs</h1>
+    <p>
+
+    </p>
+    <ul>
+        <li>Click or drag to change values</li>
+        <li>Mobile compatible</li>
+        <li>Coffeescript Implementation</li>
+    </ul>
+
+    <ul>
+        <li>Zip Archive: <a href="https://github.com/pehrlich/piechart_inputs/archive/master.zip">piecharts_inputs-master.zip</a></li>
+        <li>Project Page:  <a href="https://github.com/pehrlich/piechart_inputs/">pehrlich/piecharts_inputs</a></li>
+    </ul>
+
+
+    <h2>Demo:</h2>
+    <form id="pie">
+        <input type="hidden" name='author' value="20">
+        <input type="hidden" name='publisher' value="2">
+        <input type="hidden" name='charity' value="3">
+    </form>
+    <script type="text/javascript">
+      $('#pie').pie()
+    </script>
+
+    <h2>Markup:</h2>
+    <pre>
+        &lt;form id="pie"&gt;
+            &lt;input type="hidden" name='author' value="20"&gt;
+            &lt;input type="hidden" name='publisher' value="2"&gt;
+            &lt;input type="hidden" name='charity' value="3"&gt;
+        &lt;/form&gt;
+
+        &lt;script type="text/javascript"&gt;
+            $('#pie').pie();
+        &lt;/script&gt;
+    </pre>
+    <h2>Options:</h2>
+    <table>
+        <tr>
+            <td>label_radius</td>
+            <td>number of pixels inside from the outer edge of the pie to place the numbers.  Negative values OK.
+                Default: <code>40</code></td>
+        </tr>
+        <tr>
+            <td>label_prefix</td>
+            <td>String prefix for all labels.  Default: <code>'$'</code></td>
+        </tr>
+        <tr>
+            <td>label_suffix</td>
+            <td>String suffix for all labels.  Default: <code>''</code></td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>color scheme for the pie slices.  Should accept an integer and return
+                anything accepted by the 'fill' attribute.  Default: <code>d3.scale.category20();</code></td>
+        </tr>
+        <tr>
+            <td>display_accuracy</td>
+            <td>Number of decimals to show over the pie slices.  Default: <code>2</code></td>
+        </tr>
+        <tr>
+            <td>output_accuracy</td>
+            <td>Number of decimals to put in to the field inputs.  Default: <code>2</code></td>
+        </tr>
+    </table>
+
+    <br>
+    <h2>Maintenance:</h2>
+    Contact <a href="twitter.com/ehrlicp">@ehrlicp</a> on twitter.
+</div>
+
+</body>
+
+<script type="text/javascript" src="js/lib/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="js/lib/d3.v3.js"></script>
+<script type="text/javascript" src="js/pie.js"></script>
+<!-- to compile the coffee, use: `coffee -wc js/pie.coffee` -->
+
+<!-- for mobile debugging with weinre -->
+<!--<script src="http://192.168.1.226:3001/target/target-script-min.js#anonymous"></script>-->
+
+</html>
